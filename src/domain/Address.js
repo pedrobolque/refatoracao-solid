@@ -7,6 +7,17 @@ class Address {
     this.zipCode = zipCode;
     this.region = region;
   }
+
+  getRegion() {
+    return this.region;
+  }
+
+  getLocation() {
+    return {
+      city: this.city,
+      state: this.state
+    };
+  }
 }
 
 module.exports = Address;

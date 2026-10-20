@@ -7,6 +7,22 @@ class Customer {
     this.type = type;
     this.address = address;
   }
+
+  hasValidEmail() {
+    return Boolean(this.email && this.email.includes("@"));
+  }
+
+  getEmail() {
+    return this.email;
+  }
+
+  getShippingRegion() {
+    return this.address.getRegion();
+  }
+
+  getLocation() {
+    return this.address.getLocation();
+  }
 }
 
 module.exports = Customer;

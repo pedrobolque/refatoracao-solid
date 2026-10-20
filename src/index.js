@@ -28,7 +28,7 @@ const order = new Order(
   3
 );
 
-const service = new OrderService();
+const service = new OrderService({ productRepository });
 const result = service.process(order);
 
 console.log(JSON.stringify(result, null, 2));
